@@ -30,7 +30,7 @@ script:
 - node_modules/.bin/newman run tests/postman_collection.json -e tests/postman_environment.json
 after_success:
 - docker login -u $DOCKER_USER -p $DOCKER_PASS
-- docker tag gwnbjorn1/devops_individual_assignment
+- docker tag swagger-spring-example:1.0.0 gwnbjorn1/devops_individual_assignment
 - docker push gwnbjorn1/devops_individual_assignment
 env:
   global:
