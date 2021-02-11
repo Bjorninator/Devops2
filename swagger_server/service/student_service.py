@@ -41,8 +41,6 @@ def get_student_by_id(student_id, subject):
     if not student:
         return student
     student = Student.from_dict(student)
-    print(student.grades)
-    print(subject)
     if subject == None:
         return student
     if subject in student.grades:
@@ -58,7 +56,6 @@ def delete_student(student_id):
 
 
 def get_student_bylastname(last_name):
-    print(last_name)
     students = student_db.all()
     for f in students:
         print(f)
